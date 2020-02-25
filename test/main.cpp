@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_RUNNER
 #include "catch/catch.hpp"
 
-// TODO: back-test
+#include "back-test.hpp"
 #include "bounce-test.hpp"
 #include "circle-test.hpp"
 #include "cubic-test.hpp"

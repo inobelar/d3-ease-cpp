@@ -2,6 +2,7 @@ INCLUDEPATH += \
     $$PWD
 
 HEADERS += \
+    $$PWD/d3_ease/back.hpp \
     $$PWD/d3_ease/bounce.hpp \
     $$PWD/d3_ease/circle.hpp \
     $$PWD/d3_ease/cubic.hpp \

@@ -9,6 +9,7 @@ SOURCES += \
         main.cpp
 
 HEADERS += \
+    back-test.hpp \
     bounce-test.hpp \
     circle-test.hpp \
     cubic-test.hpp \

@@ -9,7 +9,7 @@
 #include "./inDelta.hpp"
 
 TEST_CASE("easePoly is an alias for easePolyInOut") {
-    REQUIRE( std::is_same< d3_ease::easePoly<double>, d3_ease::easePolyInOut<double> >::value == true);
+    REQUIRE( std::is_same< d3_ease::easePoly<double>, d3_ease::easePolyInOut<double> >::value == true );
 }
 
 TEST_CASE("easePolyIn(t) returns the expected results") {
