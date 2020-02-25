@@ -13,6 +13,9 @@ constexpr double exponent = 3;
 
 // NOTE: based on https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/d3-ease/index.d.ts#L78
 
+/**
+ * Polynomial easing function factory
+ */
 template <typename T, typename BaseT>
 class PolynomialEasingFactory {
 public:
