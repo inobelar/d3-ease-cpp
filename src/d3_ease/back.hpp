@@ -16,6 +16,7 @@ constexpr double overshoot = 1.70158;
  */
 template <typename T, typename BaseT>
 class BackEasingFactory {
+public:
     /**
      * Calculate eased time.
      * @param normalizedTime Normalized time typically in the range [0, 1]
