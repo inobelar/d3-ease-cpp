@@ -10,7 +10,7 @@
 #include "d3_ease/circle.hpp"
 #include "d3_ease/bounce.hpp"
 #include "d3_ease/back.hpp"
-// TODO: elastic
+#include "d3_ease/elastic.hpp"
 
 namespace d3_ease {
 
@@ -143,12 +143,17 @@ using easeBackInOut = backInOut<T>;
 // -----------------------------------------------------------------------------
 // elastic
 
-//export {
-//  elasticOut as easeElastic,
-//  elasticIn as easeElasticIn,
-//  elasticOut as easeElasticOut,
-//  elasticInOut as easeElasticInOut
-//} from "./elastic.js";
+template <typename T>
+using easeElastic = elasticOut<T>;
+
+template <typename T>
+using easeElasticIn = elasticIn<T>;
+
+template <typename T>
+using easeElasticOut = elasticOut<T>;
+
+template <typename T>
+using easeElasticInOut = elasticInOut<T>;
 
 } // namespace d3_ease
 

@@ -5,7 +5,7 @@
 #include "bounce-test.hpp"
 #include "circle-test.hpp"
 #include "cubic-test.hpp"
-// TODO: elastic-test
+#include "elastic-test.hpp"
 #include "exp-test.hpp"
 #include "linear-test.hpp"
 #include "poly-test.hpp"

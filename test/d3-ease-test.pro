@@ -13,6 +13,7 @@ HEADERS += \
     bounce-test.hpp \
     circle-test.hpp \
     cubic-test.hpp \
+    elastic-test.hpp \
     exp-test.hpp \
     generic.hpp \
     inDelta.hpp \
