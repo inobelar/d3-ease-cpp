@@ -5,15 +5,15 @@
 
 struct generic {
 
-    // Receive lambda as argument (TODO: possibly unused)
-    template <typename T, typename Func = std::function< T (T) > >
-    static inline Func out(const Func& easeIn) {
+    // Specialization for callable-object or lambda as argument
+    template <typename T, typename Callable, typename Func = std::function< T (T) > >
+    static inline Func out(const Callable& easeIn) {
         return [easeIn](T t) -> T {
             return 1 - easeIn(1 - t);
         };
     }
 
-    // Receive func ptr as argument
+    // Specialization for function pointer as argument
     template <typename T, typename Func = std::function< T (T) > >
     static inline Func out( T (*const easeIn) (T) ) {
         return [easeIn](T t) -> T {
@@ -21,15 +21,17 @@ struct generic {
         };
     }
 
-    // Receive lambda as argument (TODO: possibly unused)
-    template <typename T, typename Func = std::function< T (T) > >
-    static inline T inOut(const Func& easeIn) {
+    // -------------------------------------------------------------------------
+
+    // Specialization for callable-object or lambda as argument
+    template <typename T, typename Callable, typename Func = std::function< T (T) > >
+    static inline Func inOut(const Callable& easeIn) {
         return [easeIn](T t) -> T {
             return (t < 0.5 ? easeIn(t * 2) : (2 - easeIn((1 - t) * 2))) / 2;
         };
     }
 
-    // Receive func ptr as argument
+    // Specialization for function pointer as argument
     template <typename T, typename Func = std::function< T (T) > >
     static inline Func inOut( T (*const easeIn) (T) ) {
         return [easeIn](T t) -> T {

@@ -8,7 +8,7 @@
 // TODO: elastic-test
 #include "exp-test.hpp"
 #include "linear-test.hpp"
-// TODO: poly-test
+#include "poly-test.hpp"
 #include "quad-test.hpp"
 #include "sin-test.hpp"
 

@@ -4,7 +4,7 @@
 #include "d3_ease/linear.hpp"
 #include "d3_ease/quad.hpp"
 #include "d3_ease/cubic.hpp"
-// TODO: poly
+#include "d3_ease/poly.hpp"
 #include "d3_ease/sin.hpp"
 #include "d3_ease/exp.hpp"
 #include "d3_ease/circle.hpp"
@@ -53,12 +53,17 @@ inline T easeCubicInOut(T t) { return cubicInOut(t); }
 // -----------------------------------------------------------------------------
 // poly
 
-//export {
-//  polyInOut as easePoly,
-//  polyIn as easePolyIn,
-//  polyOut as easePolyOut,
-//  polyInOut as easePolyInOut
-//} from "./poly.js";
+template <typename T>
+using easePoly = polyInOut<T>;
+
+template <typename T>
+using easePolyIn = polyIn<T>;
+
+template <typename T>
+using easePolyOut = polyOut<T>;
+
+template <typename T>
+using easePolyInOut = polyInOut<T>;
 
 // -----------------------------------------------------------------------------
 // sin

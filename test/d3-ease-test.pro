@@ -16,5 +16,6 @@ HEADERS += \
     generic.hpp \
     inDelta.hpp \
     linear-test.hpp \
+    poly-test.hpp \
     quad-test.hpp \
     sin-test.hpp
